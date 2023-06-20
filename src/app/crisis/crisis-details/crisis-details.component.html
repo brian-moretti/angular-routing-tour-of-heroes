@@ -1,0 +1,17 @@
+<div *ngIf="crisis">
+  <h2>{{ editName }}</h2>
+  <div><span>Id: </span>{{ crisis.id }}</div>
+  <div>
+    <label for="crisis-name">Crisis name: </label>
+    <input
+      type="text"
+      id="crisis-name"
+      [(ngModel)]="editName"
+      placeholder="name"
+    />
+  </div>
+  <!--   <button type="button" (click)="goToCrises()">Go back to Heroes List</button>
+  <button type="button" (click)="goToCrisis(crisis)">Go back with a foo</button> -->
+  <button type="button" (click)="save()">Save</button>
+  <button type="button" (click)="cancel()">Cancel</button>
+</div>

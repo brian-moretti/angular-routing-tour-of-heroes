@@ -1,0 +1,16 @@
+<p>Get your Crises here!</p>
+
+<ul class="crises">
+  <li
+    *ngFor="let crisis of crises$ | async"
+    [class.selected]="crisis.id === selectedId"
+  >
+    <a [routerLink]="[crisis.id]">
+      <!-- 1 solo parametro perché nel routing c'è solo :id -->
+      <span class="badge">{{ crisis.id }}</span>
+      <span class="name">{{ crisis.name }}</span>
+    </a>
+  </li>
+</ul>
+
+<router-outlet></router-outlet>
